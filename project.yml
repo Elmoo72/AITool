@@ -1,0 +1,47 @@
+name: AITools
+options:
+  bundleIdPrefix: com.labs
+  deploymentTarget:
+    iOS: "16.0"
+  xcodeVersion: "15.0"
+
+packages:
+  ApphudSDK:
+    url: https://github.com/apphud/ApphudSDK
+    from: "3.4.0"
+
+settings:
+  base:
+    SWIFT_VERSION: "5.9"
+    MARKETING_VERSION: "1.0.0"
+    CURRENT_PROJECT_VERSION: "1"
+    IPHONEOS_DEPLOYMENT_TARGET: "16.0"
+
+targets:
+  AITools:
+    type: application
+    platform: iOS
+    sources:
+      - path: AITools
+        excludes:
+          - Info.plist
+    settings:
+      base:
+        INFOPLIST_FILE: AITools/Info.plist
+        PRODUCT_BUNDLE_IDENTIFIER: com.labs.fviu
+        SWIFT_VERSION: "5.9"
+    dependencies:
+      - package: ApphudSDK
+    info:
+      path: AITools/Info.plist
+      properties:
+        UILaunchScreen:
+          UIColorName: ""
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationPortraitUpsideDown
+        UISupportedInterfaceOrientations~ipad:
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationPortraitUpsideDown
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight

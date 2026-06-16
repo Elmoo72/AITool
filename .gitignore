@@ -1,0 +1,33 @@
+# Xcode
+*.xcuserstate
+xcuserdata/
+*.xcscheme
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+DerivedData/
+*.moved-aside
+*.xccheckout
+*.xcscmblueprint
+
+# Build
+build/
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# CocoaPods
+Pods/
+
+# SPM
+.build/
+.swiftpm/
+
+# Secrets
+*.xcconfig
+Secrets.swift
+
+# Other
+.DS_Store
+*.log
